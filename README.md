@@ -37,8 +37,6 @@ A dot density map is a type of thematic map that employs dots to represent the s
 
 ![Dot density heat map for Humidity](https://github.com/UpekshaIndeewari/R_Package_RAtmoGraphs/blob/main/5.PNG)
 
-![Dot density heat map for Wind Speed](https://github.com/UpekshaIndeewari/R_Package_RAtmoGraphs/blob/main/7.PNG)
-
 
 ## Conclusion:
 This analysis provides a comprehensive view of the weather data, highlighting the variations in temperature, humidity, and wind speed over a specific time period. The results presented above offer data's characteristics, trends, and relationships. The R package's visualization functions, such as density heat maps and distribution plots, enable users to easily interpret and communicate the findings, ultimately enhancing decision-making processes and further research in weather-related domains.
