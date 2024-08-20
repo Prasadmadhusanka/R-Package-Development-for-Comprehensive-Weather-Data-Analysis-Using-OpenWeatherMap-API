@@ -1,21 +1,77 @@
 # R Package Development for Comprehensive Weather Data Analysis Using OpenWeatherMap API
 
-This repository contains all the steps, documents, and package which is used to develop an R Package for Visualizing Weather Data from OpenWeatherMap API
+## Repository Overview
+
+This repository contains the complete development process and documentation for creating an R package designed for visualizing weather data sourced from the OpenWeatherMap API. The package, named **RAtmoGraphs**, includes all the necessary steps and files to build, document, and maintain the package effectively.
 
 ## Introduction:
-Weather conditions play a crucial role in various aspects of our daily lives, ranging from agriculture and transportation to disaster preparedness and urban planning. With the advent of easily accessible weather data through APIs, there's an increasing need for tools that simplify the visualization and analysis of this data. In response to this need, an R package “’RAtmoGraphs” that utilize the OpenWeatherMap API to extract, process, and visualize temperature, humidity, and wind speed data.
 
-## Motivation:
+Weather conditions play a crucial role in various aspects of our daily lives, ranging from agriculture and transportation to disaster preparedness and urban planning. With the advent of easily accessible weather data through APIs, there's an increasing need for tools that simplify the visualization and analysis of this data. In response to this need, an R package **RAtmoGraphs** that utilize the OpenWeatherMap API to extract, process, and visualize temperature, humidity, and wind speed data.
+
+## Motivation
+
 The motivation behind creating this R package to help researchers, analysts, and enthusiasts to easily understand weather data and get useful information from it. It aims to make the process simple and customizable for everyone. Dealing with raw data from weather APIs can be challenging to interpret. This package bridges this gap by providing easy-to-use functions that simplify the data extraction and visualization process. This helps you to understand the information better and use it to make decisions.
-The key functions within the package, namely `get_weather_data`, `map_temperature_data`, `map_humidity_data`, and `map_windspeed_data`, address for  weather data visualization. The `get_weather_data` function efficiently compiles API responses into well-structured data frames. The mapping functions, on the other hand, enable users to visualize the distribution of temperature, humidity, and wind speed across specific regions. The `map_temperature_data` function, which generates density heat maps of temperature data for the nearest 50 locations from the user's specified location. This function aids in identifying temperature trends and anomalies, helping users make informed decisions based on local weather conditions. Similarly, the `map_humidity_data` and `map_windspeed_data` functions employ dot-density maps to depict humidity and wind speed distributions, respectively, offering insights into these critical weather parameters.
+* The key functions within the package, namely `get_weather_data`, `map_temperature_data`, `map_humidity_data`, and `map_windspeed_data`, 
+  address for  weather data visualization.
+* The `get_weather_data` function efficiently compiles API responses into well-structured data frames. The mapping functions, on the 
+  other hand, enable users to visualize the distribution of temperature, humidity, and wind speed across specific regions.
+* The `map_temperature_data` function, which generates density heat maps of temperature data for the nearest 50 locations from the user's 
+  specified location. This function aids in identifying temperature trends and anomalies, helping users make informed decisions based on 
+  local weather conditions.
+* Similarly, the `map_humidity_data` and `map_windspeed_data` functions employ dot-density maps to depict humidity and wind speed 
+  distributions, respectively, offering insights into these critical weather parameters.
 
-## Data Description:
-The data used in this study is sourced from the OpenWeatherMap API, a widely used platform for accessing weather data from around the world. The API provides a comprehensive collection of weather-related information. The data is retrieved through the API's endpoints, which allow us to request specific weather parameters for various geographical locations. API is customized to extract data including temperature, humidity, wind speed for 50 points from the user’s location. Data set includes the following key variables:
-1. Location Information: Latitude and longitude coordinates indicating the geographical location of the observation point.
-2. Temperature: The recorded temperature at the specified location and time. 
-3. Humidity: The relative humidity level at the specified location and time.
-4. Wind Speed: The speed of the wind at the specified location and time
-5.Description : Describe the current weather condition of the place
+## Methodology
+
+### Data Source
+
+The data used in the "RAtmoGraphs" package is sourced from the [OpenWeatherMap API](https://openweathermap.org/api), a widely recognized and comprehensive platform for accessing weather data across the globe. OpenWeatherMap provides real-time and historical weather data, including temperature, humidity, wind speed, precipitation, and atmospheric pressure, among other parameters. The data is retrieved through the API's endpoints, which allow for the extraction of specific weather parameters for various geographical locations. For this package, the API is customized to extract data, including temperature, humidity, and wind speed, for 50 points surrounding the user’s specified location.
+
+Key Features of the OpenWeatherMap API:
+
+* Global Coverage: Offers weather data for any geographical location worldwide, including over 200,000 cities.
+* Current and Historical Data: Provides both current weather data and historical weather data for analysis.
+* Multiple Parameters: Allows access to a wide range of weather parameters such as temperature, humidity, wind speed, pressure, and more.
+* Free and Paid Plans: OpenWeatherMap offers a free tier with limited access and paid plans that provide more extensive data and higher 
+  request limits.
+
+The dataset includes the following key variables:
+1.	Station name
+2.	Latitude
+3.	Longitude
+4.	Temperature / humidity / pressure
+5.	description
+6.	
+
+### R Package Development
+
+The development and implementation of the "RAtmoGraphs" package involve several key steps, from package developmet to visualization and package deployment. Below is a detailed outline of the entire process.
+
+**1. create_package():**
+
+a. First, Call `create_package()` to initialize a new package in a directory on computer. create_package() will automatically create 
+   that directory if it doesn’t exist yet.
+
+**`create_package("~/path/to/RAtmoGraphs")`**
+
+b. Then call `devtools` package in R whcih is widely used by developers for creating, testing, and managing R packages. It provides a 
+   suite of functions that streamline the package development process. 
+
+When create a new R package using create_package() from the devtools package, the function sets up a directory structure that includes several important files and subdirectories. These components are crucial for the organization, building, and distribution of R package
+
+* **.Rbuildignore** and **.gitignore** help manage what gets included in final package and what gets tracked by version control.
+* **DESCRIPTION** is essential for defining package's identity, dependencies, and author information, which are necessary for package 
+   distribution and installation.
+* **NAMESPACE** ensures that package’s interface is clean and that dependencies are correctly managed.
+* The **R/ directory** is where the actual code lives, making it the heart of your package.
+* The **.Rproj** file and **.Rproj.user** directory enhance the development experience in RStudio by managing your environment and 
+  session settings
+
+c. Then call `use_git()` function (which is often used alongside devtools in R package development) is used to initialize a Git 
+   repository  in current project directory.
+
+
+
 
 ## Data Exploration:
 Exploring the weather data is essential to explore characteristics and patterns within the dataset. It involves understanding the distribution, trends, and potential outliers present in the temperature, humidity, and wind speed variables. Here are some exploratory data analysis techniques that can be applied through this package to the weather dataset:
