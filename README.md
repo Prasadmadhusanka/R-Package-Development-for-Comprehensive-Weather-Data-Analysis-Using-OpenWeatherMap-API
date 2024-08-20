@@ -1,5 +1,6 @@
-# R_Package_RAtmoGraphs
-Developing an R Package for Visualizing Weather Data from OpenWeatherMap API
+# R Package Development for Comprehensive Weather Data Analysis Using OpenWeatherMap API
+
+This repository contains all the steps and documents, package which is used to develop an R Package for Visualizing Weather Data from OpenWeatherMap API
 
 ## Introduction:
 Weather conditions play a crucial role in various aspects of our daily lives, ranging from agriculture and transportation to disaster preparedness and urban planning. With the advent of easily accessible weather data through APIs, there's an increasing need for tools that simplify the visualization and analysis of this data. In response to this need, an R package “’RAtmoGraphs” that utilize the OpenWeatherMap API to extract, process, and visualize temperature, humidity, and wind speed data.
