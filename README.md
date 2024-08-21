@@ -47,12 +47,13 @@ The development and implementation of the "RAtmoGraphs" package involve several 
 
 #### 1. create_package():
 
-a. First, Call `create_package()` to initialize a new package in a directory on computer. `create_package()` will automatically create that directory if it doesn’t exist yet.
+a. First, Call `create_package()` to initialize a new package in a directory on computer. `create_package()` will automatically create 
+   that directory if it doesn’t exist yet.
 
 **`create_package("~/path/to/RAtmoGraphs")`**
 
-b. Then call `devtools` package in R whcih is widely used by developers for creating, testing, and managing R packages. It provides a suite of functions that streamline the package 
-   development process. 
+b. Then call `devtools` package in R whcih is widely used by developers for creating, testing, and managing R packages. It provides a 
+   suite of functions that streamline the package development process. 
 
 When create a new R package using create_package() from the devtools package, the function sets up a directory structure that includes several important files and subdirectories. These components are crucial for the organization, building, and distribution of R package.
 
@@ -75,11 +76,13 @@ Develop the `get_weather_data` function to interact with the OpenWeatherMap API.
 
 **Functions for Visualization:**
 
-* Temperature Visualization (`map_temperature_data`)  :
-  Develop the `map_temperature_data` function to create density heat maps using the processed data. Utilize packages like `ggplot2`, `sf`, or `leaflet` for creating visualizations.
+* Temperature Visualization (`map_temperature_data`):
+  Develop the `map_temperature_data` function to create density heat maps using the processed data. Utilize packages like `ggplot2`, 
+  `sf`, or `leaflet` for creating visualizations.
 
 * Humidity Visualization (`map_humidity_data`):
-  Create a function to generate dot-density maps for humidity data. Each dot can represent a predefined quantity of humidity, with color or size variations to indicate intensity.
+  Create a function to generate dot-density maps for humidity data. Each dot can represent a predefined quantity of humidity, with color 
+  or size variations to indicate intensity.
 
 * Wind Speed Visualization (`map_windspeed_data`):
   Similarly, develop a function for wind speed visualization using dot-density mapping techniques.
@@ -144,13 +147,15 @@ Following describe step by step guide on how to create vignettes for R package:
 
 **a. Set Up the `knitr` and `rmarkdown` Packages**
 
-     Vignettes are typically written in R Markdown (`.Rmd` files), so need the `knitr` and `rmarkdown` packages to create and render them.
+     Vignettes are typically written in R Markdown (`.Rmd` files), so need the `knitr` and `rmarkdown` packages to create and render 
+     them.
      
      **`install.packages(c("knitr", "rmarkdown"))`**
 
 **b. Add the `vignette` Directory**
 
-     Then  need to create a `vignettes` directory in R package structure if it doesn’t already exist. This is where all  vignette files will be stored.
+     Then  need to create a `vignettes` directory in R package structure if it doesn’t already exist. This is where all  vignette files 
+     will be stored.
      
      **`usethis::use_vignette(“vignette-name")`**
      
@@ -158,11 +163,13 @@ Following describe step by step guide on how to create vignettes for R package:
 
 **c. Edit the Vignette**
 
-     Open the newly created R Markdown file in the `vignettes` directory and edit it to include content. The file will have a `.Rmd` extension and should include:
+     Open the newly created R Markdown file in the `vignettes` directory and edit it to include content. The file will have a `.Rmd` 
+     extension and should include:
 
      - Title and Metadata: At the top of the file, provide a title and other metadata using YAML syntax.
      - Narrative Text: Write descriptive text explaining the features and use cases of your package.
-     - Code Chunks: Include R code chunks that demonstrate how to use package. These chunks should be wrapped in ```{r} ``` for execution.
+     - Code Chunks: Include R code chunks that demonstrate how to use package. These chunks should be wrapped in ```{r} ``` for 
+      execution.
   
 **d. Build and Test**
   
