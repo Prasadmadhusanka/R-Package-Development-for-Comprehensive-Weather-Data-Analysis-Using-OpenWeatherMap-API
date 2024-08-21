@@ -135,7 +135,7 @@ The `use_package()` function from the usethis package is designed to simplify th
 
 The `use_readme_rmd()` function from the usethis package is used to set up a README file for  R package using R Markdown. R Markdown is a versatile tool for creating dynamic documents, and it allows to write  README file in a format that can include both code and narrative text. This function helps create a standardized and comprehensive README that can include instructions, examples, and other relevant information about package. It includes a basic template in the README.Rmd file, with placeholders and structure to help you get started. The template typically includes sections like package description, installation instructions, usage examples, and more.
 
-## 15. The end, check() and install()
+#### 15. The end, check() and install()
 
 Once set up the  R package with all the necessary components such as writing functions, adding documentation, and setting up tests need to ensure that the package is correctly structured and functional. This is where the `check()` and `install()` functions come into play.
 
@@ -147,33 +147,33 @@ Following describe step by step guide on how to create vignettes for R package:
 
 **a. Set Up the `knitr` and `rmarkdown` Packages**
 
-     Vignettes are typically written in R Markdown (`.Rmd` files), so need the `knitr` and `rmarkdown` packages to create and render 
-     them.
+Vignettes are typically written in R Markdown (`.Rmd` files), so need the `knitr` and `rmarkdown` packages to create and render 
+them.
      
-     **`install.packages(c("knitr", "rmarkdown"))`**
+**`install.packages(c("knitr", "rmarkdown"))`**
 
 **b. Add the `vignette` Directory**
 
-     Then  need to create a `vignettes` directory in R package structure if it doesn’t already exist. This is where all  vignette files 
-     will be stored.
+Then  need to create a `vignettes` directory in R package structure if it doesn’t already exist. This is where all  vignette files 
+will be stored.
      
-     **`usethis::use_vignette(“vignette-name")`**
+**`usethis::use_vignette(“vignette-name")`**
      
-     This command creates a new R Markdown file and adds the necessary entries to `DESCRIPTION` file.
+This command creates a new R Markdown file and adds the necessary entries to `DESCRIPTION` file.
 
 **c. Edit the Vignette**
 
-     Open the newly created R Markdown file in the `vignettes` directory and edit it to include content. The file will have a `.Rmd` 
-     extension and should include:
+Open the newly created R Markdown file in the `vignettes` directory and edit it to include content. The file will have a `.Rmd` 
+extension and should include:
 
-     - Title and Metadata: At the top of the file, provide a title and other metadata using YAML syntax.
-     - Narrative Text: Write descriptive text explaining the features and use cases of your package.
-     - Code Chunks: Include R code chunks that demonstrate how to use package. These chunks should be wrapped in ```{r} ``` for 
-      execution.
+- Title and Metadata: At the top of the file, provide a title and other metadata using YAML syntax.
+-  Narrative Text: Write descriptive text explaining the features and use cases of your package.
+-  Code Chunks: Include R code chunks that demonstrate how to use package. These chunks should be wrapped in ```{r} ``` for 
+   execution.
   
 **d. Build and Test**
   
-     Use `devtools::build_vignettes()` and `devtools::check()` to ensure the vignette is correctly included and functioning.
+Use `devtools::build_vignettes()` and `devtools::check()` to ensure the vignette is correctly included and functioning.
   
 #### 17. Building and Installing the Package
 
