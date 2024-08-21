@@ -63,6 +63,10 @@ When create a new R package using create_package() from the devtools package, th
 * The **R/ directory** is where the actual code lives, making it the heart of your package.
 * The **.Rproj** file and **.Rproj.user** directory enhance the development experience in RStudio by managing your environment and session settings.
 
+Following shows important files and sub categories created 
+
+![create package](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/create%20pakage.PNG)
+
 #### 2. use_git()
 
 Then call `use_git()` function (which is often used alongside devtools in R package development) is used to initialize a Git repository in current project directory.
@@ -71,7 +75,7 @@ Then call `use_git()` function (which is often used alongside devtools in R pack
 
 **Function for API Integration**
 
-`get_weather_data` Function: 
+* `get_weather_data` Function: 
 Develop the `get_weather_data` function to interact with the OpenWeatherMap API. This function should accept parameters like station name,latitude, longitude, type of weather data (e.g., temperature, humidity, wind speed) and description. The function will send HTTP GET requests to the API, retrieve the data, and structure it into a data frame. It gives the details for 50 nearest locations from the user.
 
 **Functions for Visualization:**
@@ -91,6 +95,8 @@ Develop the `get_weather_data` function to interact with the OpenWeatherMap API.
 
 Then call `use_r()` function to create new R script files within R package project. These script files are stored in the `R/` directory of package and are essential for defining the functions and code that make up the core functionality of the package. This directory is where  typically store the R functions and other R code files.
 
+![use_r](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/usr_r.png)
+
 #### 5.	Load_all()
 
 The `load_all()` function from the devtools package  is a crucial tool for R package development. It helps streamline the process of loading and testing of package’s functions during development. Calling  `load_all()`  loads all the functions and objects from package’s R/ directory into R session. This allows testing and interacting with the package as if it were installed. Also Instead of installing the package (which involves building and installing it into the R library), and allows to quickly load the package code without going through the installation process. This is useful for rapid development and testing. Whenever make changes to package code, `load_all()` ensures that the latest version of the package is loaded into R session. This way, can immediately test the updates without needing to reinstall the package.
@@ -105,17 +111,25 @@ It checks that all functions and datasets in the package are properly documented
 
 Then edit the description file. The `DESCRIPTION` file is a critical component of any R package. It contains metadata about the package, including its name, version, dependencies, and more.  This information is used to understand the package’s purpose and requirements. Editing the DESCRIPTION file correctly is essential for ensuring that the package is properly configured, adheres to standards, and functions as expected. Under dependencies, It lists other R packages that  package depends on, ensuring that all necessary dependencies are installed when the package is used. It specifies the license under which your package is distributed, informing users of their rights and obligations. Also It includes additional information such as the package’s URL, bug reports, and collaborators.
 
+![description](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/DESCRIPTION.PNG)
+
 #### 8.	use_mit_license()
 
 The `use_mit_license()` function is used to add an MIT License to R package. The MIT License is a popular open-source license known for its simplicity and permissiveness. It allows others to freely use, modify, and distribute code, as long as they include the original copyright notice and license text. When calling `use_mit_license()`, it generates a LICENSE file in the root directory of R package, which contains the text of the MIT License. This file is crucial for ensuring that the package’s licensing terms are clearly communicated. The function adds placeholders for author name and the year in the license text, which should customize to reflect the actual author and the current year. Including a license file in package clarifies the terms under which others can use, modify, and distribute code. This protects your rights as an author and informs users of their obligations. The MIT License is permissive and well-understood, which can encourage other developers to use and contribute to package.
+
+![mitlicnse](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/mit_license.png)
 
 #### 9.	Document()
 
 By call The `document()` function from the devtools package is used to generate documentation files for R package based on the comments and annotations in R script files. This process involves converting Roxygen2 comments (which are used to document functions and other objects in the package) into .Rd files, which are the standard documentation format for R packages. It creates .Rd (R documentation) files in the `man/` directory of package. These files are used to create the help pages for your functions, datasets, and other objects. It updates the documentation files based on the latest Roxygen2 comments in R scripts. This ensures that the documentation is in sync with code. It also updates the NAMESPACE file to include any new functions or datasets that have documented or to adjust exports according to annotations.
 
+![doument](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/mit_license.png)
+
 #### 10. check() again
 
 After calling the `document()` function to generate or update the package documentation, it’s essential to run the `check()` function to validate that everything in the package is functioning correctly and adheres to best practices. Once this function call regexcite should pass R CMD check cleanly now and forever more: 0 errors, 0 warnings, 0 notes.
+
+![check](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/check_again.PNG)
 
 #### 11. install()
 
@@ -123,9 +137,13 @@ The `install()` function from the devtools package is used to install the R pack
 
 After installation, the package is available for loading and testing in R environment. Then can use library(packageName) to load it. Also It allows to verify that the package installation process is successful and that the package is functioning as expected in the local environment. After making changes to package, use `install()` to apply these changes locally and test them before finalizing or distributing the package. Ensures that the package is correctly built and installed, and that all functions and features work as expected. It is an integral part of the development workflow, allowing to iteratively build, install, and test the package.
 
+![instsll](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/install.PNG)
+
 #### 12. use_testthat()
 
 The `use_testthat()` function from the usethis package is used to set up the testthat framework for testing within R package. testthat is a popular package for unit testing in R, providing tools to write and run tests to ensure that package functions as expected. It creates a tests/testthat/ directory in package structure, including essential files for organizing and running tests.It adds testthat as a dependency in package’s DESCRIPTION file, ensuring that testthat is installed when the package is used. Also it generates a sample test file (tests/testthat/testthat.R) with basic content to help get started with writing tests and configures the basic setup needed for running tests with testthat.
+
+![usetest](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/test.png)
 
 #### 13. use_package()
 
@@ -135,6 +153,8 @@ The `use_package()` function from the usethis package is designed to simplify th
 
 The `use_readme_rmd()` function from the usethis package is used to set up a README file for  R package using R Markdown. R Markdown is a versatile tool for creating dynamic documents, and it allows to write  README file in a format that can include both code and narrative text. This function helps create a standardized and comprehensive README that can include instructions, examples, and other relevant information about package. It includes a basic template in the README.Rmd file, with placeholders and structure to help you get started. The template typically includes sections like package description, installation instructions, usage examples, and more.
 
+![readme](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/readme.PNG)
+
 #### 15. The end, check() and install()
 
 Once set up the  R package with all the necessary components such as writing functions, adding documentation, and setting up tests need to ensure that the package is correctly structured and functional. This is where the `check()` and `install()` functions come into play.
@@ -142,6 +162,8 @@ Once set up the  R package with all the necessary components such as writing fun
 #### 16. Creating vignettes
 
 Creating vignettes for an R package is an important step in providing comprehensive documentation and examples of how to use the package. Vignettes are long-form guides or tutorials that demonstrate the functionalities of R package in a more detailed and narrative manner compared to traditional documentation.
+
+![vigneete](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/vignette.png)
 
 Following describe step by step guide on how to create vignettes for R package:
 
@@ -189,7 +211,7 @@ Exploring the weather data is essential to explore characteristics and patterns 
 
 For analysis, extracted weather data using the `get_weather_data` function from  R package. This function efficiently gathered information on temperature, humidity, and wind speed from the OpenWeatherMap API for a specific region and time period. This raw data was then structured into a data frame, a tabular format that organizes the data for easy manipulation and analysis. The data frame provided a clear overview of the collected weather data, with each row representing an observation and each column corresponding to a specific variable (location name, latitude, longitude, timestamp, temperature, humidity, wind speed, and description etc.). This organized structure allowed us to perform various analyses and visualizations to gain insights into the weather patterns
 
-![Data Frame for Tempurature](https://github.com/UpekshaIndeewari/R_Package_RAtmoGraphs/blob/main/1.PNG)
+![Data Frame for Tempurature](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/dataframe.PNG)
 
 ### Geospatial Visualization:
 
@@ -197,17 +219,17 @@ A **density heat map**, visually represents the density or distribution of data 
 
 **Map for tempurature**
 
-![Density heat map for Tempurature](https://github.com/UpekshaIndeewari/R_Package_RAtmoGraphs/blob/main/3.PNG)
+![Density heat map for Tempurature](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/heatmap2.PNG)
 
 A **dot density map** is a type of thematic map that employs dots to represent the spatial distribution of a particular phenomenon or attribute. Each dot on the map represents a predefined quantity of the phenomenon being studied. The arrangement and concentration of these dots provide insights into the density and patterns of the phenomenon across a geographical area. In the context of weather data visualization, a dot density map could be used to represent the distribution of variables like humidity and wind speed. For example, a dot density map of humidity might show each dot representing a certain percentage of humidity. Also the color and the size of the Dot relative the value of the parameter. Dots could be clustered in areas with higher humidity levels and sparser in regions with lower humidity.
 
 **Map for humidity**
 
-![Dot density heat map for Humidity](https://github.com/UpekshaIndeewari/R_Package_RAtmoGraphs/blob/main/5.PNG)
+![Dot density heat map for Humidity](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/humidity%20map.PNG)
 
 **Map for Wind Speed**
 
-![Dot density heat map for Wind Speed](https://github.com/UpekshaIndeewari/R_Package_RAtmoGraphs/blob/main/7.PNG)
+![Dot density heat map for Wind Speed](https://github.com/UpekshaIndeewari/R-Package-Development-for-Comprehensive-Weather-Data-Analysis-Using-OpenWeatherMap-API/blob/main/images/windspeed%20map.PNG)
 
 ## Conclusion
 
