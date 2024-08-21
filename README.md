@@ -10,6 +10,12 @@ This repository contains the complete development process and documentation for 
 - [Motivation](#motivation)
 - [Methodology](#methodology)
   - [Data Source](#data-source)
+  - [R Package Development](r-package-development)
+- [Analysis Results](analysis-results)
+  - [Data Exploration](data-exploration)
+  - [Data Frame Visualization](data-frame-visualization)
+  - [Geospatial Visualization](geospatial-visualization)
+- [Conclusion](conclusion)
 
 ## Introduction
 
@@ -208,9 +214,9 @@ Use `devtools::build_vignettes()` and `devtools::check()` to ensure the vignette
 
 Use `devtools::build()` to compile R package into a tarball (.tar.gz) file. This file can then be shared or uploaded to repositories like CRAN or GitHub.
 
-## Analysis Results:
+## Analysis Results
 
-### Data Exploration:
+### Data Exploration
 
 Exploring the weather data is essential to explore characteristics and patterns within the dataset. It involves understanding the distribution, trends, and potential outliers present in the temperature, humidity, and wind speed variables.  Use geographical plots (maps) to visualize the distribution of temperature, humidity, and wind speed across different locations. This can highlight regional variations and trends. By performing thorough data exploration, users of the R package can gain a comprehensive understanding of the weather data's characteristics and insights. This serves as a foundation for making informed decisions, conducting further analysis, and utilizing the package's visualization functions effectively to communicate findings.
 
