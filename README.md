@@ -9,9 +9,13 @@ This repository contains the complete development process and documentation for 
 - [Introduction](#introduction)
 - [Motivation](#motivation)
 - [Methodology](#methodology)
-- [Analysis Results](Analysis-Results)
-- [Conclusion](conclusion)
   - [Data Source](#data-source)
+  - [R Package Development](r-package-development)
+- [Analysis Results](analysis-results)
+  - [Data Exploration](data-exploration)
+  - [Data Frame Visualization](data-frame-visualization)
+  - [Geospatial Visualization](geospatial-visualization)
+- [Conclusion](conclusion)
 
 
 ## Introduction
